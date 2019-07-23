@@ -1,0 +1,328 @@
+body,ul{
+    margin: 0;
+    padding: 0;
+
+    font: 12px/1.5 tahoma,arial,'Hiragino Sans GB','\5b8b\4f53',sans-serif;
+}
+ol,ul{
+    list-style: none;
+}
+a{
+    color: #3C3C3C;
+    text-decoration:none;
+}
+
+
+.clearfix::before.clearfix::after{
+    content: " ";
+    display: table;
+}
+
+
+.nav{
+    position: relative;
+    width: 100%;
+    height: 35px;
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #eee;
+}
+
+.nav .nav-bd{
+    position: relative;
+    margin: 0 auto;
+    width: 1190px;
+    height: 35px;
+}
+
+.nav .nav-bd ul{
+    display: inline-block;
+    height: 35px;
+}
+
+.nav .nav-bd li{
+    color: #3C3C3C;
+    display: inline-block;
+    margin-right: 7px;
+    padding: 0 6px;
+    font: 12px/1.5 tahoma,arial,'Hiragino Sans GB','\5b8b\4f53',sans-serif;
+    line-height: 35px;
+}
+
+.nav .nav-bd li a:hover{
+    color: #F40;
+}
+
+.nav .nav-bd .nav-bd-right{
+    position: absolute;
+    right: 0;
+}
+
+
+/* 标题栏 */
+.title{
+    position: relative;
+    height: 121px;
+    width: 1205px;
+    margin: 0 auto;
+    margin-left: 358px;
+    margin-top: 24px;
+}
+
+.title .title-logo{
+    top: 0;
+    left: 0;
+    display: inline-block;
+    position: absolute;
+    height: 88px;
+    width: 190px;
+}
+
+.title .title-logo a{
+    
+    display: block;
+    height: 80px;
+    width: 190px;
+}
+
+.title .title-logo a img{
+    position: relative;
+    left: 50%;
+    margin-left: -74px;
+    top: 50%;
+    margin-top: -32px;
+}
+
+.title .title-search{
+    position: relative;
+    display: inline-block;
+    width: 628px;
+    height: 87px;
+    left: 257px;
+    top: -0px;
+}
+
+.title .title-search .title-search-sort{
+    height: 22px;
+    width: 613px;
+    margin-left: 17px;
+}
+
+.title .title-search .title-search-sort a{
+    display: inline-block;
+    
+    color: #F40;
+    font-weight: 100;
+    text-align: center;
+    width: 36px;
+    height: 22px;
+    line-height: 22px;
+    margin-right: 4px;
+    cursor: pointer;
+}
+
+.title .title-search .title-search-sort .active{
+    color: #FFF;
+    border-radius: 6px 6px 0px 0px;
+    font-weight: 700;
+    background-image: linear-gradient(to right,#ff9000 0,#ff5000 100%);
+}
+
+.title .title-search .title-search-from{
+    margin-top: 0px;
+    width: 630px;
+    height: 40px;
+    position: relative;
+}
+
+.title .title-search .title-search-from .from-bg{
+    display: inline-block;
+    width: 554px;
+    height: 36px;
+    border: 2px solid #ff5000;
+    border-right: none;
+    border-radius: 20px 0px 0px 20px;
+}
+
+.title .title-search .title-search-from .from-bg input{
+    height: 24px;
+    width: 472px;
+    margin: 5px 0 7px 10px;
+    color: #000;
+    font-size: 100%;
+    border: none;
+    outline:none;
+}
+.title .title-search .title-search-from button{
+    height: 40px;
+    width: 74px;
+    margin-left: -6px;
+    padding: 0;
+    display: inline;
+    font-size: 18px;
+    font-weight: 700;
+    color: #FFF;
+    background-color: #FF4200;
+    cursor: pointer;
+    outline:none;
+    border: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-image: -webkit-linear-gradient(left,#ff9000 0,#ff5000 100%);
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.title .title-search>ul{
+    padding-top: 5px;
+    width: 589px;
+    height: 18px;
+    line-height: 18px;
+}
+
+.title .title-search>ul>li{
+    display: inline;
+}
+.title .title-search>ul>li>a:hover{
+    color: #F40;
+}
+
+/* 二级导航 */
+.subnav{
+    height: 30px;
+    width: 100%;
+    background-color: transparent;
+    background-image: linear-gradient(to right,#ff9000 0,#ff5000 100%);
+    margin-top: -24px;
+    position: relative;
+}
+
+.subnav>div{
+    position: absolute;
+    left: 356.5px;
+    width: 1190px;
+    height: 30px;
+    margin: 0;
+    line-height: 30px;
+    position: relative;
+    color: #fff;
+}
+
+.subnav>div>h2{
+    margin: 0;
+    float: left;
+    width: 190px;
+    text-align: center;
+    font-size: 16px;
+    background: #ff5000;
+    line-height: 30px;
+}
+.subnav>div>ul{
+    margin-left: 200px;
+}
+.subnav>div>ul>li{
+    display: inline;
+    font-size: 16px;
+    line-height: 30px;
+}
+
+.subnav>div>ul>li>a{
+    display: inline-block;
+    padding: 0 4px;
+    text-align: center;
+    font-size: 16px;
+    color: #FFF;
+    font-weight: 700;
+}
+
+/* 主页面内容 */
+.main{
+    width: 100%;
+    height: 632px;
+    position: relative;
+}
+
+.main .main-pos{
+    position: absolute;
+    height: 632px;
+    width: 1190px;
+    left: 357px;
+}
+
+.main .main-menu{
+    width: 190px;
+    height: 522px;
+    position: absolute;
+}
+
+.main .main-menu .menu{
+    width: 188px;
+    height: 512px;
+    border: 1px solid #ff5000;
+    border-top: none;
+    padding-top: 5px;
+    padding-bottom: 3px;
+}
+
+.main .main-carousel{
+    position: absolute;
+    left: 200px;
+    top: 10px;
+    width: 520px;
+    height: 512px;
+    
+}
+
+.main .main-carousel .carousel-top{
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 520px;
+    height: 280px;
+    background: #F40;
+}
+
+.main .main-carousel .carousel-bottom{
+    position: absolute;
+    bottom: 0;
+    width: 520px;
+    height: 230px;
+    background: #F40;
+}
+
+.main .main-column{
+    position: absolute;
+    top: 10px;
+    left: 730px;
+    height: 512px;
+    width: 160px;
+}
+
+.main .main-column h5{
+    font-size: 12px;
+    font-weight: 400;
+    background: #f1f1f1;
+    color: #a1a1a1;
+    line-height: 24px;
+    margin: 0;
+    padding: 0;
+    padding-top: 3px;
+}
+
+.main .main-Headlines{
+    width: 890px;
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #F40;
+}
+
+.main .main-right{
+    width: 290px;
+    height: 622px;
+    background: #ff9000;
+    position: absolute;
+    right: 0;
+    top: 10px
+}
