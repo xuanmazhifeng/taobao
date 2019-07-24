@@ -253,16 +253,212 @@ a{
     width: 190px;
     height: 522px;
     position: absolute;
+    z-index: 1000;
 }
 
-.main .main-menu .menu{
-    width: 188px;
-    height: 512px;
+.main-menu>ul{
     border: 1px solid #ff5000;
     border-top: none;
     padding-top: 5px;
     padding-bottom: 3px;
+    width: 188px;
+    height: 512px;
 }
+
+.main-menu>ul>li{
+    position: relative;
+    padding-left: 25px;
+    padding-right: 19px;
+    height: 32px;
+    width: 145px;
+    line-height: 32px;
+    font-size: 14px;
+    font-weight: 400;
+    overflow: hidden;
+    color: #666;
+}
+
+.main-menu>ul>li:hover{
+    background-color: rgb(255,228,220);
+    color: #F40;
+}
+
+.main-menu>ul>li>a,.main-menu>ul>li>i{
+    color: #666;
+}
+
+.main-menu>ul>li:hover>a,.main-menu>ul>li:hover>i{
+    color: #F40;
+}
+
+.main-menu>ul>li>a:hover{
+    text-decoration: underline;
+}
+
+.main-menu>ul>li>i{
+    position: absolute;
+    right: 10px;
+    font-size: 12px;
+    font-style: normal;
+}
+
+.main .submenu{
+    display: none;
+    position: absolute;
+    left: 188px;
+    top: 0;
+    padding: 0 0 0 18px;
+    width: 692px;
+    height: 518px;
+    border: 2px solid #F94A14;
+    box-shadow: 2px 2px 0 #dcdadb;
+    background-color: #FFF;
+    color: #333;
+    font-size: 12px;
+}
+
+.submenu .submenu-item{
+    display: none;
+    color: #333;
+    font-size: 12px;
+    width: 692px;
+    height: 518px;
+}
+
+.submenu .submenu-item .item-links{
+    padding-top: 10px;
+    width: 415px;
+    height: 490px;
+    overflow: hidden;
+    padding-right: 12px;
+    padding-left: 10px;
+}
+
+.submenu .submenu-item .item-links>div{
+    height: 173px;
+    width: 415px;
+    margin-bottom: 5px;
+    color: rgb(51,51,51);
+}
+
+.submenu .submenu-item .item-links>div>h5{
+    margin: 0;
+    padding: 0;
+    position: relative;
+    display: block;
+    width: 415px;
+    height: 36px;
+}
+
+.submenu .submenu-item .item-links>div>h5>a:first-child{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 36px;
+    color: rgb(60,60,60);
+}
+
+.submenu .submenu-item .item-links>div>h5>a:last-child>i{
+    position: absolute;
+    right: 0px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 36px;
+    color: rgb(60,60,60);
+    font-style: normal;
+}
+
+.submenu .submenu-item .item-links>div>h5>a:hover{
+    color: #F40;
+}
+
+.submenu .submenu-item .item-links>div>h5>a:hover>i{
+    color: #F40;
+}
+
+
+.submenu .submenu-item .item-links>div>p{
+    margin: 0;
+    padding: 0;
+    height: 104px;
+    overflow: hidden;
+    padding-bottom: 33px;
+    line-height: 26px;
+}
+
+.submenu .submenu-item .item-links>div>p>a{
+    display: inline-block;
+    margin-right: 12px;
+    white-space: nowrap;
+}
+
+.submenu .submenu-item .item-service{
+    width: 253px;
+    height: 498px;
+    padding-top: 20px;
+    position: absolute;
+    right: 3px;
+    top: 0;
+    border-left: 1px solid #f4f4f4;
+}
+
+.submenu .submenu-item .item-service>h3{
+    display: block;
+    width: 253px;
+    height: 18px;
+    margin: 0;
+    padding: 0;
+    font-style: normal;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    text-align: center;
+}
+
+.submenu .submenu-item .item-service>div{
+    width: 253px;
+    height: 465px;
+    overflow: hidden;
+}
+
+.submenu .submenu-item .item-service>div>a{
+    display: inline-block;
+    width: 97px;
+    height: 143px;
+    padding: 10px 0 0 20px;
+    overflow: hidden;
+}
+
+.submenu .submenu-item .item-service>div>a>div{
+    display: block;
+    width: 98px;
+    height: 97px;
+    background-color: #000;
+}
+
+.submenu .submenu-item .item-service>div>a>div>img{
+    display: block;
+    width: 98px;
+    height: 97px;
+}
+
+.submenu .submenu-item .item-service>div>a>h5{
+    height: 26px;
+    line-height: 26px;
+    font-size: 12px;
+    overflow: hidden;
+    font-weight: 400;
+    color: #999;
+}
+
+.submenu .submenu-item .item-service>div>a>div>img:hover{
+    opacity: 0.8;
+}
+
+.submenu .submenu-item .item-service>div>a:hover>h5{
+    color: #F40;
+}
+
+
 
 .main .main-carousel{
     position: absolute;
