@@ -4,23 +4,31 @@ var img_list = $('.img_list');
 var nav_list = $('.nav-list li');
 
 
+
+for(var i = 0; i < nav_list.length; i++){
+    nav_list[i].index = i;
+    nav_list.eq(i).on('click', function(){
+        ShowMainByIndex((this.index + 1) * -520);
+    })
+}
+
 left_buttom.on('click', function(){
-    ShowMainByIndex(520);
+    ShowMainByIndex(mainLeft + 520);
 });
 
 right_buttom.on('click',function(){
-    ShowMainByIndex(-520);
+    ShowMainByIndex(mainLeft - 520);
 })
 
 var nowMainLeft = -520;//当前
 var mainLeft = -520;//将要显示
 var moveSpeed = 10;//移动速度
 var Speed;
-function ShowMainByIndex(index){
-    mainLeft += index;
+function ShowMainByIndex(left){
+    mainLeft = left;
     Speed = Math.abs((Math.abs(nowMainLeft) - Math.abs(mainLeft)))/10;
     if(moveItv == null){
-        console.log("mainLeft:" + mainLeft + "nowMainLeft:" + nowMainLeft);
+        //console.log("mainLeft:" + mainLeft + "nowMainLeft:" + nowMainLeft);
         moveItv = setInterval(MoveMainLeft, moveSpeed);
     }
 }
@@ -61,17 +69,34 @@ function MoveMainLeft(){
         img_list.css('left', nowMainLeft + 'px');
         
         for(var i = 0; i < nav_list.length; i++){
-            // if(nav_list[i].hasClass('active')){
-                
-            // }
-            console.log(nav_list[i]);
-            alert(nav_list[i].hasClass('active'));
+            if(nav_list.eq(i).hasClass('active')){
+                nav_list.eq(i).removeClass('active');
+            }
         }
-        nav_list[(nowMainLeft/-520) - 1].addClass('active'); 
-
+        nav_list.eq((nowMainLeft/-520) - 1).addClass('active'); 
         clearInterval(moveItv);
         moveItv = null;
     }
-
-
 }
+
+//计时器 自动切换
+var time = 0;
+var isHover = false;
+
+$('.main').on('mouseover', function () {
+    time = 0;
+    isHover = true;
+})
+$('.main').on('mouseleave', function () {
+    isHover = false;
+})
+
+setInterval(() => {
+    if (isHover == false) {
+        time++;
+        if (time >= 3) {
+            time = 0;
+            right_buttom.click();
+        }
+    }
+}, 1000);
