@@ -12,12 +12,15 @@ a{
     text-decoration:none;
 }
 
-
 .clearfix::before.clearfix::after{
     content: " ";
     display: table;
 }
 
+h1,h2,h3,h4,h5,h6,p{
+    padding: 0;
+    margin: 0;
+}
 
 .nav{
     position: relative;
@@ -221,9 +224,23 @@ a{
     margin-left: 200px;
 }
 .subnav>div>ul>li{
+    position: relative;
     display: inline;
     font-size: 16px;
     line-height: 30px;
+}
+
+.subnav>div>ul>li:hover>a::after{
+    position: absolute;
+    top: -33px;
+    left: 50%;
+    margin-left: -15px;
+    content:"";
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-image: url(img/logo.png);
+    background-size: 30px;
 }
 
 .subnav>div>ul>li>a{
@@ -511,7 +528,105 @@ a{
     position: absolute;
     bottom: 0;
     left: 0;
-    background-color: #F40;
+    background-color: #fff;
+}
+
+.main .main-Headlines>div{
+    position: relative;
+    padding: 14px 14px 12px 20px;
+    margin-top: 10px;
+    background: #fff;
+}
+
+.main .main-Headlines>div>h3{
+    display: inline-block;
+    width: 180px;
+    height: 73px;
+    background: url(https://img.alicdn.com/tfs/TB1KbhkbUgQMeJjy0FeXXXOEVXa-129-26.png) 0 14px no-repeat;
+}
+
+.main .main-Headlines>div>a{
+    position: absolute;
+    top: 14px;
+    right: 16px;
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 400;
+    background: #fff;
+    color: #999;
+    width: 40px;
+    text-align: right;
+}
+
+.main .main-Headlines>div>a:hover{
+    color: #F40;
+}
+
+.main .main-Headlines>div>h3>p{
+    font-size: 12px;
+    margin-top: 42px;
+    line-height: 24px;
+    height: 24px;
+    color: #999;
+    font-weight: 400;
+}
+
+.main .main-Headlines>div>div{
+    position: absolute;
+    top: 14px;
+    left: 180px;
+    float: none;
+    overflow: hidden;
+    height: 73px;
+    display: block;
+    width: 676px;
+    height: 73px;
+}
+
+.main .main-Headlines>div>div>a{
+    display: block;
+    height: 73px;
+}
+
+.main .main-Headlines>div>div>a>img{
+    position: absolute;
+    height: 73px;
+    width: 130px;
+}
+
+.main .main-Headlines>div>div>a>h4{
+    position: absolute;
+    top: 2px;
+    left: 144px;
+    color: #333;
+    height: 28px;
+    overflow: hidden;
+    display: inline-block;
+    line-height: 28px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.main .main-Headlines>div>div>a>p{
+    position: absolute;
+    top: 28px;
+    margin-left: 144px;
+    color: #999;
+    height: 36px;
+    overflow: hidden;
+    line-height: 18px;
+    font-size: 14px;
+}
+
+.main .main-Headlines>div>div>a:hover>h4{
+    color: #F40;
+}
+
+.main .main-Headlines>div>div>a:hover>div{
+    width: 130px;
+    height: 73px;
+    position: absolute;
+    background-color: rgb(255,228,220,0.3);
 }
 
 .main .main-right{
