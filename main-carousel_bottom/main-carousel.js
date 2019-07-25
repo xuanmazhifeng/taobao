@@ -1,9 +1,9 @@
 $(document).ready(function () {
     var left_buttom = $('.nav-left');
     var right_buttom = $('.nav-right');
-    var img_list = $('.img_list');
-    var nav_list = $('.nav-list li');
-
+    var img_list = $('.img-list');
+    var nav_list = $('.navlist li');
+    var nav_index = $('.nav-index');
 
 
     for (var i = 0; i < nav_list.length; i++) {
@@ -45,21 +45,21 @@ $(document).ready(function () {
 
         img_list.css('left', nowMainLeft + 'px');
 
-        if (mainLeft >= 0 || mainLeft <= -3120) {
-            if (nowMainLeft < -3120 + Speed) {
+        if (mainLeft >= 0 || mainLeft <= -3640) {
+            if (nowMainLeft < -3640 + Speed) {
                 nowMainLeft = -520;
-                if (mainLeft == -3120) {
+                if (mainLeft == -3640) {
                     mainLeft = -520;
-                } else if (mainLeft < -3120) {
-                    mainLeft += 2600;
+                } else if (mainLeft < -3640) {
+                    mainLeft += 3120;
                 }
             }
             if (nowMainLeft > 0 - Speed) {
-                nowMainLeft = -2600;
+                nowMainLeft = -3120;
                 if (mainLeft == 0) {
-                    mainLeft = -2600;
+                    mainLeft = -3120;
                 } else if (mainLeft > 0) {
-                    mainLeft -= 2600;
+                    mainLeft -= 3120;
                 }
             }
         }
@@ -75,6 +75,7 @@ $(document).ready(function () {
                 }
             }
             nav_list.eq((nowMainLeft / -520) - 1).addClass('active');
+            nav_index.text(nowMainLeft / -520);
             clearInterval(moveItv);
             moveItv = null;
         }
